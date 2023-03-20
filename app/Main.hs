@@ -10,7 +10,8 @@ data Options = Options {
     iterations :: Int,
     imageDimensions :: (Int, Int),
     scale :: (Double, Double),
-    offset :: (Double, Double)
+    offset :: (Double, Double),
+    filePath :: String
   }
 
 options :: Parser Options
@@ -45,6 +46,12 @@ options = Options
       help "The offset in pixels to apply in the (x, y axes)" <>
       showDefault <>
       value (475, 950))
+    <*> strOption (
+      short 'p' <>
+      long "filePath" <>
+      help "The file path to output the image to" <>
+      showDefault <>
+      value "fern.png")
 
 main :: IO ()
 main = do
@@ -53,14 +60,14 @@ main = do
                <> header "Functional Fern Generator"
                <> progDesc "A handy tool for generating images of ferns"
 
-  (Options fernName iterations imageDimensions scale offset) <- execParser opts
+  (Options fernName iterations imageDimensions scale offset filePath
+    ) <- execParser opts
 
   -- Find the matching fern to use
   let fern = getFernByName barnsleyFern fernName
 
   -- Create and write the image to a file
-  let filename = "fern.png"
-  writePng filename $ fernImage ((0,0), mkStdGen 123456789)
+  writePng filePath $ fernImage ((0,0), mkStdGen 123456789)
                                 (TurtleConfig scale offset)
                                 fern iterations imageDimensions
-  putStrLn $ "Your fern has been saved at ./" ++ filename ++ " 🌿"
+  putStrLn $ "Your fern has been saved at ./" ++ filePath ++ " 🌿"

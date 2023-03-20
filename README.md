@@ -1,6 +1,6 @@
-# Fernando
+# Fernando 🌿
 
-A CLI tool for generating images of ferns 🌿
+A CLI tool for generating images of ferns.
 
 
 
@@ -15,7 +15,9 @@ stack build
 stack exec fernando-exe
 ```
 
-This should generate an image of a Barnsley fern at [./fern.png](./fern.png) by default. You can supply flags to fernando as follows:
+This should generate an image of a Barnsley fern at [./fern.png](./fern.png) by default, with colours reminiscent of an [Anna Atkins cyanotype](https://www.moma.org/artists/231). 
+
+Various options are available to customise the appearance of the ferns. To see the supported options, do:
 
 ```bash
 stack exec -- fernando-exe --help

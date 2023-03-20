@@ -1,8 +1,10 @@
-import Codec.Picture (writePng)
+import Codec.Picture (PixelRGB8(..), writePng)
+import Data.List (stripPrefix)
 import Options.Applicative
 import System.Random (mkStdGen)
 import Ferns (getFernByName, barnsleyFern)
 import FernImage (fernImage)
+import Text.Read (readMaybe)
 import Turtle
 
 data Options = Options {
@@ -11,8 +13,19 @@ data Options = Options {
     imageDimensions :: (Int, Int),
     scale :: (Double, Double),
     offset :: (Double, Double),
-    filePath :: String
+    filePath :: String,
+    backgroundColour :: PixelRGB8,
+    foregroundColour :: PixelRGB8
   }
+
+parsePixelRGB8 :: String -> Maybe PixelRGB8
+parsePixelRGB8 str =
+  case stripPrefix "PixelRGB8 " str of
+    Just rest ->
+      case words rest of
+        [r, g, b] -> PixelRGB8 <$> readMaybe r <*> readMaybe g <*> readMaybe b
+        _ -> Nothing
+    Nothing -> Nothing
 
 options :: Parser Options
 options = Options
@@ -52,6 +65,18 @@ options = Options
       help "The file path to output the image to" <>
       showDefault <>
       value "fern.png")
+    <*> option (maybeReader parsePixelRGB8) (
+      short 'b' <>
+      long "backgroundColour" <>
+      help "The colour of the background as an RGB8 value" <>
+      showDefault <>
+      value (PixelRGB8 0 49 83))
+    <*> option (maybeReader parsePixelRGB8) (
+      short 'c' <>
+      long "fernColour" <>
+      help "The colour of the fern as an RGB8 value" <>
+      showDefault <>
+      value (PixelRGB8 255 255 255))
 
 main :: IO ()
 main = do
@@ -61,7 +86,7 @@ main = do
                <> progDesc "A handy tool for generating images of ferns"
 
   (Options fernName iterations imageDimensions scale offset filePath
-    ) <- execParser opts
+           backgroundColour fernColour) <- execParser opts
 
   -- Find the matching fern to use
   let fern = getFernByName barnsleyFern fernName
@@ -70,4 +95,5 @@ main = do
   writePng filePath $ fernImage ((0,0), mkStdGen 123456789)
                                 (TurtleConfig scale offset)
                                 fern iterations imageDimensions
+                                (backgroundColour, fernColour)
   putStrLn $ "Your fern has been saved at ./" ++ filePath ++ " 🌿"

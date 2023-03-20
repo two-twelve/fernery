@@ -1,4 +1,3 @@
-main
-*.hi
-*.o
+.stack-work/
+*~
 *.png

@@ -1,6 +1,6 @@
 module Turtle where
   import System.Random (StdGen, randomR)
-  import Ferns (Point, Transform, Fern)
+  import Ferns (Point, Transform)
 
   -- Define a TurtleState as a point and a random number generator
   type TurtleState = (Point, StdGen)

@@ -13,6 +13,7 @@ data Options = Options {
     offset :: (Double, Double)
   }
 
+options :: Parser Options
 options = Options
     <$> strOption (
       short 'f' <>
@@ -25,7 +26,7 @@ options = Options
       long "iterations" <>
       help "The number of iterations to render" <>
       showDefault <>
-      value 1_000_000)
+      value 1000000)
     <*> option auto (
       short 'd' <>
       long "dimensions" <>
@@ -45,6 +46,7 @@ options = Options
       showDefault <>
       value (475, 950))
 
+main :: IO ()
 main = do
   let opts = info (options <**> helper)
              $ fullDesc

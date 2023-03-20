@@ -1,0 +1,58 @@
+name:                fernando
+version:             0.1.0.0
+github:              "theteacat/fernando"
+license:             MIT
+author:              "Joshua O'Sullivan"
+maintainer:          "joshua.r.osullivan@gmail.com"
+copyright:           "2023 Joshua O'Sullivan"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+synopsis:            A CLI tool for generating images of ferns
+category:            Art
+description:         Please see the README on GitHub at <https://github.com/theteacat/fernando#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- JuicyPixels
+- optparse-applicative
+- random
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  fernando-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - fernando
+
+tests:
+  fernando-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - fernando

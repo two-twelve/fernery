@@ -40,6 +40,7 @@ library
     , containers
     , optparse-applicative
     , random
+    , time
   default-language: Haskell2010
 
 executable fernery-exe
@@ -56,6 +57,7 @@ executable fernery-exe
     , fernery
     , optparse-applicative
     , random
+    , time
   default-language: Haskell2010
 
 test-suite fernery-test
@@ -73,4 +75,5 @@ test-suite fernery-test
     , fernery
     , optparse-applicative
     , random
+    , time
   default-language: Haskell2010

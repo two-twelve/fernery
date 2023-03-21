@@ -1,5 +1,7 @@
 import Codec.Picture (PixelRGB8(..), writePng)
 import Data.List (stripPrefix)
+import Data.Maybe
+import Data.Time.Clock.POSIX
 import Options.Applicative
 import System.Random (mkStdGen)
 import Ferns (getFernByName, barnsleyFern)
@@ -16,7 +18,7 @@ data Options = Options {
     filePath :: String,
     backgroundColour :: PixelRGB8,
     foregroundColour :: PixelRGB8,
-    seed :: Int
+    seed :: Maybe Int
   }
 
 parsePixelRGB8 :: String -> Maybe PixelRGB8
@@ -78,12 +80,10 @@ options = Options
       help "The colour of the fern as an RGB8 value" <>
       showDefault <>
       value (PixelRGB8 255 255 255))
-    <*> option auto (
+    <*> optional (option auto (
       short 'S' <>
       long "seed" <>
-      help "The seed to use when generating the fern" <>
-      showDefault <>
-      value 0)
+      help "Random number generator seed. Defaults to current POSIX second."))
 
 main :: IO ()
 main = do
@@ -93,10 +93,14 @@ main = do
                <> progDesc "A CLI tool for generating images of ferns"
 
   (Options fernName iterations imageDimensions scale offset filePath
-           backgroundColour fernColour seed) <- execParser opts
+           backgroundColour fernColour seedOption) <- execParser opts
 
   -- Find the matching fern to use
   let fern = getFernByName barnsleyFern fernName
+
+  -- Determine the seed value to use
+  now <- fmap round getPOSIXTime
+  let seed = fromMaybe now seedOption
 
   -- Create and write the image to a file
   writePng filePath $ fernImage ((0,0), mkStdGen seed)

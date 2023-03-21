@@ -20,6 +20,7 @@ dependencies:
 - JuicyPixels
 - optparse-applicative
 - random
+- time
 
 ghc-options:
 - -Wall

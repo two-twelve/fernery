@@ -31,7 +31,7 @@ This list of examples is currently exhaustive, but I'd love to see more ferns ad
 
 
 
-### Barnsley Fern
+### Barnsley fern
 
 ```bash
 stack exec -- fernery-exe -p 'examples/barnsley.png'
@@ -68,6 +68,5 @@ stack exec -- fernery-exe -p 'examples/thelypteridaceae.png' -f thelypteridaceae
 <p align="center">
   <img width="60%" src="./examples/thelypteridaceae.png">
 </p>
-
 
 

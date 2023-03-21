@@ -15,7 +15,8 @@ data Options = Options {
     offset :: (Double, Double),
     filePath :: String,
     backgroundColour :: PixelRGB8,
-    foregroundColour :: PixelRGB8
+    foregroundColour :: PixelRGB8,
+    seed :: Int
   }
 
 parsePixelRGB8 :: String -> Maybe PixelRGB8
@@ -77,6 +78,12 @@ options = Options
       help "The colour of the fern as an RGB8 value" <>
       showDefault <>
       value (PixelRGB8 255 255 255))
+    <*> option auto (
+      short 'S' <>
+      long "seed" <>
+      help "The seed to use when generating the fern" <>
+      showDefault <>
+      value 0)
 
 main :: IO ()
 main = do
@@ -86,13 +93,13 @@ main = do
                <> progDesc "A handy tool for generating images of ferns"
 
   (Options fernName iterations imageDimensions scale offset filePath
-           backgroundColour fernColour) <- execParser opts
+           backgroundColour fernColour seed) <- execParser opts
 
   -- Find the matching fern to use
   let fern = getFernByName barnsleyFern fernName
 
   -- Create and write the image to a file
-  writePng filePath $ fernImage ((0,0), mkStdGen 123456789)
+  writePng filePath $ fernImage ((0,0), mkStdGen seed)
                                 (TurtleConfig scale offset)
                                 fern iterations imageDimensions
                                 (backgroundColour, fernColour)

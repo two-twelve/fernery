@@ -25,13 +25,13 @@ stack exec -- fernery-exe --help
 
 
 
-## Examples
+## Example Ferns
 
 This list of examples is currently exhaustive, but I'd love to see more ferns added to this little CLI tool. 🧑‍🎨
 
 
 
-### Barnsley fern
+### Barnsley Fern
 
 ```bash
 stack exec -- fernery-exe -p 'examples/barnsley.png'
@@ -43,7 +43,7 @@ stack exec -- fernery-exe -p 'examples/barnsley.png'
 
 
 
-### Leptosporangiate fern
+### Leptosporangiate Fern
 
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_mutated_-Leptosporangiate_fern.PNG).
 
@@ -57,7 +57,7 @@ stack exec -- fernery-exe -p 'examples/leptosporangiate.png' -f leptosporangiate
 
 
 
-### Thelypteridaceae fern
+### Thelypteridaceae Fern
 
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_with_different_coefficients_plotted_with_VisSim.PNG).
 

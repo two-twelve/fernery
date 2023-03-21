@@ -89,8 +89,8 @@ main :: IO ()
 main = do
   let opts = info (options <**> helper)
              $ fullDesc
-               <> header "Functional Fern Generator"
-               <> progDesc "A handy tool for generating images of ferns"
+               <> header "Fernery 🌿"
+               <> progDesc "A CLI tool for generating images of ferns"
 
   (Options fernName iterations imageDimensions scale offset filePath
            backgroundColour fernColour seed) <- execParser opts

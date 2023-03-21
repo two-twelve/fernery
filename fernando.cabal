@@ -15,6 +15,7 @@ author:         Joshua O'Sullivan
 maintainer:     joshua.r.osullivan@gmail.com
 copyright:      2023 Joshua O'Sullivan
 license:        MIT
+license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md

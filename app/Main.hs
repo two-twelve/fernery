@@ -59,7 +59,7 @@ options = Options
     <*> option auto (
       short 'o' <>
       long "offset" <>
-      help "The offset in pixels to apply in the (x, y axes)" <>
+      help "The offset in pixels to apply in the (x, y) axes" <>
       showDefault <>
       value (475, 950))
     <*> strOption (

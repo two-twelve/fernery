@@ -4,13 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           fernando
+name:           fernery
 version:        0.1.0.0
 synopsis:       A CLI tool for generating images of ferns
-description:    Please see the README on GitHub at <https://github.com/theteacat/fernando#readme>
+description:    Please see the README on GitHub at <https://github.com/theteacat/fernery#readme>
 category:       Art
-homepage:       https://github.com/theteacat/fernando#readme
-bug-reports:    https://github.com/theteacat/fernando/issues
+homepage:       https://github.com/theteacat/fernery#readme
+bug-reports:    https://github.com/theteacat/fernery/issues
 author:         Joshua O'Sullivan
 maintainer:     joshua.r.osullivan@gmail.com
 copyright:      2023 Joshua O'Sullivan
@@ -22,7 +22,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/theteacat/fernando
+  location: https://github.com/theteacat/fernery
 
 library
   exposed-modules:
@@ -30,7 +30,7 @@ library
       Ferns
       Turtle
   other-modules:
-      Paths_fernando
+      Paths_fernery
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -42,10 +42,10 @@ library
     , random
   default-language: Haskell2010
 
-executable fernando-exe
+executable fernery-exe
   main-is: Main.hs
   other-modules:
-      Paths_fernando
+      Paths_fernery
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
@@ -53,16 +53,16 @@ executable fernando-exe
       JuicyPixels
     , base >=4.7 && <5
     , containers
-    , fernando
+    , fernery
     , optparse-applicative
     , random
   default-language: Haskell2010
 
-test-suite fernando-test
+test-suite fernery-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_fernando
+      Paths_fernery
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
@@ -70,7 +70,7 @@ test-suite fernando-test
       JuicyPixels
     , base >=4.7 && <5
     , containers
-    , fernando
+    , fernery
     , optparse-applicative
     , random
   default-language: Haskell2010

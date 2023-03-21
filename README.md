@@ -1,4 +1,4 @@
-# Fernando 🌿
+# Fernery 🌿
 
 A CLI tool for generating images of ferns.
 
@@ -9,10 +9,10 @@ A CLI tool for generating images of ferns.
 Install [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/), then:
 
 ```bash
-git clone git@github.com:TheTeaCat/fernando.git
-cd fernando
+git clone git@github.com:TheTeaCat/fernery.git
+cd fernery
 stack build
-stack exec fernando-exe
+stack exec fernery-exe
 ```
 
 This should generate an image of a Barnsley fern at [./fern.png](./fern.png) by default, with colours reminiscent of an [Anna Atkins cyanotype](https://www.moma.org/artists/231). 
@@ -20,7 +20,7 @@ This should generate an image of a Barnsley fern at [./fern.png](./fern.png) by 
 Various options are available to customise the appearance of the ferns. To see the supported options, do:
 
 ```bash
-stack exec -- fernando-exe --help
+stack exec -- fernery-exe --help
 ```
 
 
@@ -34,7 +34,7 @@ This list of examples is currently exhaustive, but I'd love to see more ferns ad
 ### Barnsley Fern
 
 ```bash
-stack exec -- fernando-exe -p 'examples/barnsley.png'
+stack exec -- fernery-exe -p 'examples/barnsley.png'
 ```
 
 <p align="center">
@@ -48,7 +48,7 @@ stack exec -- fernando-exe -p 'examples/barnsley.png'
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_mutated_-Leptosporangiate_fern.PNG).
 
 ```bash
-stack exec -- fernando-exe -p 'examples/leptosporangiate.png' -f leptosporangiate -s '(210, -160)'
+stack exec -- fernery-exe -p 'examples/leptosporangiate.png' -f leptosporangiate -s '(210, -160)'
 ```
 
 <p align="center">
@@ -62,7 +62,7 @@ stack exec -- fernando-exe -p 'examples/leptosporangiate.png' -f leptosporangiat
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_with_different_coefficients_plotted_with_VisSim.PNG).
 
 ```bash
-stack exec -- fernando-exe -p 'examples/thelypteridaceae.png' -f thelypteridaceae -s '(-210, 125)'
+stack exec -- fernery-exe -p 'examples/thelypteridaceae.png' -f thelypteridaceae -s '(-210, 125)'
 ```
 
 <p align="center">

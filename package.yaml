@@ -1,6 +1,6 @@
-name:                fernando
+name:                fernery
 version:             0.1.0.0
-github:              "theteacat/fernando"
+github:              "theteacat/fernery"
 license:             MIT
 author:              "Joshua O'Sullivan"
 maintainer:          "joshua.r.osullivan@gmail.com"
@@ -12,7 +12,7 @@ extra-source-files:
 # Metadata used when publishing your package
 synopsis:            A CLI tool for generating images of ferns
 category:            Art
-description:         Please see the README on GitHub at <https://github.com/theteacat/fernando#readme>
+description:         Please see the README on GitHub at <https://github.com/theteacat/fernery#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -36,7 +36,7 @@ library:
   source-dirs: src
 
 executables:
-  fernando-exe:
+  fernery-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -44,10 +44,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - fernando
+    - fernery
 
 tests:
-  fernando-test:
+  fernery-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -55,4 +55,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - fernando
+    - fernery

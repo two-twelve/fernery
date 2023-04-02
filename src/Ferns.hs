@@ -4,24 +4,32 @@ module Ferns where
   type Transform = Point -> Point
   type Fern = [(Double, Transform)]
 
-  barnsleyFern, leptosporangiateFern, thelypteridaceaeFern :: Fern
+  -- Define a function for creating affine transformations
+  affine :: (Double, Double, Double, Double, Double, Double) -> Transform
+  affine (a, b, c, d, e, f) (x, y) = (a*x + b*y + e, c*x + d*y + f)
+
+  barnsleyFern :: Fern
   barnsleyFern = [
-      (0.02, \(x, y) -> ( 0.00*x +0.00*y,  0.00*x +0.16*y -0.00)),
-      (0.84, \(x, y) -> ( 0.85*x +0.04*y, -0.04*x +0.85*y +1.60)),
-      (0.07, \(x, y) -> ( 0.20*x -0.26*y,  0.23*x +0.22*y +1.60)),
-      (0.07, \(x, y) -> (-0.15*x +0.28*y,  0.26*x +0.24*y +0.44))
+      (0.02, affine (0, 0, 0, 0.16, 0, 0)),
+      (0.84, affine (0.85, 0.04, -0.04, 0.85, 0, 1.6)),
+      (0.07, affine (0.2, -0.26, 0.23, 0.22, 0, 1.6)),
+      (0.07, affine (-0.15, 0.28, 0.26, 0.24, 0, 0.44))
     ]
+
+  leptosporangiateFern :: Fern
   leptosporangiateFern = [
-      (0.02, \(x, y) -> ( 0.00*x +0.00*y,  0.00*x +0.25*y -0.14)),
-      (0.84, \(x, y) -> ( 0.85*x +0.02*y, -0.02*x +0.83*y +1.00)),
-      (0.07, \(x, y) -> ( 0.09*x -0.28*y,  0.30*x +0.11*y +0.60)),
-      (0.07, \(x, y) -> (-0.09*x +0.28*y,  0.30*x +0.09*y +0.70))
+      (0.02, affine (0, 0, 0, 0.25, 0, -0.14)),
+      (0.84, affine (0.85, 0.02, -0.02, 0.83, 0, 1.0)),
+      (0.07, affine (0.09, -0.28, 0.3, 0.11, 0, 0.6)),
+      (0.07, affine (-0.09, 0.28, 0.3, 0.09, 0, 0.7))
     ]
+
+  thelypteridaceaeFern :: Fern
   thelypteridaceaeFern = [
-      (0.02, \(x, y) -> ( 0.000*x +0.000*y +0.000,  0.000*x +0.25*y -0.40)),
-      (0.84, \(x, y) -> ( 0.950*x +0.005*y -0.002, -0.005*x +0.93*y -0.50)),
-      (0.07, \(x, y) -> ( 0.035*x -0.200*y -0.009,  0.160*x +0.04*y -0.70)),
-      (0.07, \(x, y) -> (-0.040*x +0.200*y +0.083,  0.160*x +0.04*y -0.70))
+      (0.02, affine (0, 0, 0, 0.25, 0, -0.4)),
+      (0.84, affine (0.95, 0.005, -0.005, 0.93, -0.002, -0.5)),
+      (0.07, affine (0.035, -0.2, 0.16, 0.04, -0.009, -0.7)),
+      (0.07, affine (-0.040, 0.2, 0.16, 0.04, 0.083, -0.7))
     ]
 
   -- Define a func that creates a list of transforms of size N for a fern where
@@ -35,8 +43,8 @@ module Ferns where
   getFernByName :: Fern -> String -> Fern
   getFernByName defaultFern fernName | fernName == "barnsley" =
                                         barnsleyFern
-                                     | fernName == "leptosporangiate" = 
+                                     | fernName == "leptosporangiate" =
                                         leptosporangiateFern
-                                     | fernName == "thelypteridaceae" = 
+                                     | fernName == "thelypteridaceae" =
                                         thelypteridaceaeFern
                                      | otherwise = defaultFern

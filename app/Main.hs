@@ -1,4 +1,4 @@
-import Codec.Picture (PixelRGB8(..), writePng)
+import Codec.Picture (PixelRGBA8(..), writePng)
 import Data.List (stripPrefix)
 import Data.Maybe
 import Data.Time.Clock.POSIX
@@ -16,17 +16,17 @@ data Options = Options {
     scale :: (Double, Double),
     offset :: (Double, Double),
     filePath :: String,
-    backgroundColour :: PixelRGB8,
-    foregroundColour :: PixelRGB8,
+    backgroundColour :: PixelRGBA8,
+    foregroundColour :: PixelRGBA8,
     seed :: Maybe Int
   }
 
-parsePixelRGB8 :: String -> Maybe PixelRGB8
-parsePixelRGB8 str =
-  case stripPrefix "PixelRGB8 " str of
+parsePixelRGBA8 :: String -> Maybe PixelRGBA8
+parsePixelRGBA8 str =
+  case stripPrefix "PixelRGBA8 " str of
     Just rest ->
       case words rest of
-        [r, g, b] -> PixelRGB8 <$> readMaybe r <*> readMaybe g <*> readMaybe b
+        [r, g, b, a] -> PixelRGBA8 <$> readMaybe r <*> readMaybe g <*> readMaybe b <*> readMaybe a
         _ -> Nothing
     Nothing -> Nothing
 
@@ -68,18 +68,18 @@ options = Options
       help "The file path to output the image to" <>
       showDefault <>
       value "fern.png")
-    <*> option (maybeReader parsePixelRGB8) (
+    <*> option (maybeReader parsePixelRGBA8) (
       short 'b' <>
       long "backgroundColour" <>
       help "The colour of the background as an RGB8 value" <>
       showDefault <>
-      value (PixelRGB8 0 49 83))
-    <*> option (maybeReader parsePixelRGB8) (
+      value (PixelRGBA8 0 49 83 255))
+    <*> option (maybeReader parsePixelRGBA8) (
       short 'c' <>
       long "fernColour" <>
       help "The colour of the fern as an RGB8 value" <>
       showDefault <>
-      value (PixelRGB8 255 255 255))
+      value (PixelRGBA8 255 255 255 255))
     <*> optional (option auto (
       short 'S' <>
       long "seed" <>

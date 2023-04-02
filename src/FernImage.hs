@@ -8,7 +8,7 @@ module FernImage where
   -- fern, a desired number of iterations, an image width and height in pixels,
   -- and a background and fern colour
   fernImage :: TurtleState -> TurtleConfig -> Fern -> Int
-               -> (Int, Int) -> (PixelRGB8, PixelRGB8) -> Image PixelRGB8
+               -> (Int, Int) -> (PixelRGBA8, PixelRGBA8) -> Image PixelRGBA8
   fernImage turtle turtleConfig fern iterations 
             (imageWidth, imageHeight) (backgroundColour, fernColour) =
     generateImage getColour imageWidth imageHeight

@@ -85,7 +85,7 @@ stack exec -- fernery-exe -f thelypteridaceae -s '(-210, 125)'
 ### The Sierpinski Gasket
 
 ```bash
-stack exec -- fernery-exe -f sierpinskiGasket -o '(500,1000)' -s '(500,500)' -c 'PixelRGB8 0 0 0' -b 'PixelRGB8 255 255 255'
+stack exec -- fernery-exe -f sierpinskiGasket -o '(500,1000)' -s '(500,500)' -c 'PixelRGBA8 0 0 0 255' -b 'PixelRGBA8 255 255 255 255'
 ```
 
 <p align="center">
@@ -96,7 +96,7 @@ stack exec -- fernery-exe -f sierpinskiGasket -o '(500,1000)' -s '(500,500)' -c 
 ### The Sierpinski Carpet
 
 ```bash
-stack exec -- fernery-exe -f sierpinskiCarpet -o '(50,50)' -s '(900,900)' -i 10000000 -c 'PixelRGB8 255 255 255' -b 'PixelRGB8 114 47 55' 
+stack exec -- fernery-exe -f sierpinskiCarpet -o '(50,50)' -s '(900,900)' -i 10000000 -c 'PixelRGBA8 255 255 255 255' -b 'PixelRGBA8 114 47 55 255' 
 ```
 
 <p align="center">
@@ -108,7 +108,7 @@ stack exec -- fernery-exe -f sierpinskiCarpet -o '(50,50)' -s '(900,900)' -i 100
 ### The Sierpinski Pentagon
 
 ```bash
-stack exec -- fernery-exe -f sierpinskiPentagon -o '(250,875)' -s '(500,500)' -b 'PixelRGB8 135 206 235' -c 'PixelRGB8 0 0 0'
+stack exec -- fernery-exe -f sierpinskiPentagon -o '(250,875)' -s '(500,500)' -b 'PixelRGBA8 135 206 235 255' -c 'PixelRGBA8 0 0 0 255'
 ```
 
 <p align="center">
@@ -120,7 +120,7 @@ stack exec -- fernery-exe -f sierpinskiPentagon -o '(250,875)' -s '(500,500)' -b
 ### The Levy Dragon
 
 ```bash
-stack exec -- fernery-exe -f levyDragon -o '(275,250)' -s '(450,450)' -d '(1000,800)' -b 'PixelRGB8 251 206 177' -c 'PixelRGB8 0 0 0'
+stack exec -- fernery-exe -f levyDragon -o '(275,250)' -s '(450,450)' -d '(1000,800)' -b 'PixelRGBA8 251 206 177 255' -c 'PixelRGBA8 0 0 0 255'
 ```
 
 <p align="center">
@@ -132,7 +132,7 @@ stack exec -- fernery-exe -f levyDragon -o '(275,250)' -s '(450,450)' -d '(1000,
 ### The Heighway Dragon
 
 ```bash
-stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '(500,500)' -c 'PixelRGB8 0 0 0' -b 'PixelRGB8 255 255 255' -i 10000000
+stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '(500,500)' -c 'PixelRGBA8 0 0 0 255' -b 'PixelRGBA8 255 255 255 255' -i 10000000
 ```
 
 <p align="center">
@@ -143,7 +143,7 @@ stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '
 ### McWorter's Pentigree
 
 ```bash
-stack exec -- fernery-exe -f mcWortersPentigree -o '(130,330)' -s '(800,800)' -b 'PixelRGB8 202 231 193' -c 'PixelRGB8 0 0 0'
+stack exec -- fernery-exe -f mcWortersPentigree -o '(130,330)' -s '(800,800)' -b 'PixelRGBA88 202 231 193 255' -c PixelRGBA88 0 0 0 255'
 ```
 
 <p align="center">
@@ -157,7 +157,7 @@ stack exec -- fernery-exe -f mcWortersPentigree -o '(130,330)' -s '(800,800)' -b
 The transforms used to generate this fractal are from an old worksheet authored by David L. Dewey which can be found [here](https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm).
 
 ```bash
-stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,1000)' -b 'PixelRGB8 255 255 255' -c 'PixelRGB8 0 0 0'
+stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,1000)' -b 'PixelRGBA8 255 255 255 255' -c 'PixelRGBA8 0 0 0 255'
 ```
 
 <p align="center">

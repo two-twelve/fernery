@@ -202,8 +202,9 @@ stack exec -- fernery-exe -f treeFractal -o '(50,950)' -s '(900,-900)' -c 'Pixel
 ```
 
 <p align="center">
-  <img width="80%" src="./examples/treeFractal.png">
+  <img width="60%" src="./examples/treeFractal.png">
 </p>
+
 
 
 

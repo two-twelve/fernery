@@ -71,6 +71,16 @@ module Ferns where
       (0.5, affine (0.5, 0.5, -0.5, 0.5, 0, 0)),
       (0.5, affine (-0.5, -0.5, 0.5, -0.5, 1, 0))
     ]
+  
+  mcWortersPentigree :: Fern
+  mcWortersPentigree = [
+      (1/6, affine (0.309, -0.255, 0.255, 0.309, 0, 0)),
+      (1/6, affine (-0.188, -0.363, 0.363, -0.188, 0.309, 0.255)),
+      (1/6, affine (0.309, 0.255, -0.255, 0.309, 0.191, 0.588)),
+      (1/6, affine (-0.188, 0.363, -0.363, -0.188, 0.5, 0.363)),
+      (1/6, affine (0.309, 0.255, -0.255, 0.309, 0.382, 0)),
+      (1/6, affine (0.309, -0.255, 0.255, 0.309, 0.691, -0.255))
+    ]
 
   -- Sourced from an old Fractal lab worksheet:
   -- https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm
@@ -107,6 +117,8 @@ module Ferns where
                                         levyDragon
                                      | fernName == "heighwayDragon" =
                                         heighwayDragon
+                                     | fernName == "mcWortersPentigree" =
+                                        mcWortersPentigree
                                      | fernName == "davidLDewey" =
                                         davidLDewey
                                      | otherwise = defaultFern

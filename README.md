@@ -37,6 +37,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [The Sierpinski Pentagon](#The-Sierpinski-Pentagon)
 - [The Levy Dragon](#The-Levy-Dragon)
 - [The Heighway Dragon](#The-Heighway-Dragon)
+- [McWorter's Pentigree](#McWorter's-Pentigree)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)
 
 
@@ -137,6 +138,18 @@ stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '
 <p align="center">
   <img width="80%" src="./examples/heighwayDragon.png">
 </p>
+
+
+### McWorter's Pentigree
+
+```bash
+stack exec -- fernery-exe -f mcWortersPentigree -o '(130,330)' -s '(800,800)' -b 'PixelRGB8 202 231 193' -c 'PixelRGB8 0 0 0'
+```
+
+<p align="center">
+  <img width="60%" src="./examples/mcWortersPentigree.png">
+</p>
+
 
 
 ### DavidLDewey Fractal

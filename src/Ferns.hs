@@ -39,6 +39,18 @@ module Ferns where
       (0.34, affine (0.5, 0, 0, 0.5, -1, 1))
     ]
 
+  sierpinskiCarpet :: Fern
+  sierpinskiCarpet = [
+      (0.125, affine(1/3, 0, 0, 1/3, 0, 0)),
+      (0.125, affine(1/3, 0, 0, 1/3, 0, 1/3)),
+      (0.125, affine(1/3, 0, 0, 1/3, 0, 2/3)),
+      (0.125, affine(1/3, 0, 0, 1/3, 1/3, 0)),
+      (0.125, affine(1/3, 0, 0, 1/3, 1/3, 2/3)),
+      (0.125, affine(1/3, 0, 0, 1/3, 2/3, 0)),
+      (0.125, affine(1/3, 0, 0, 1/3, 2/3, 1/3)),
+      (0.125, affine(1/3, 0, 0, 1/3, 2/3, 2/3))
+    ]
+
   heighwayDragon :: Fern
   heighwayDragon = [
       (0.5, affine (0.5, 0.5, -0.5, 0.5, 0, 0)),
@@ -72,6 +84,8 @@ module Ferns where
                                         thelypteridaceaeFern
                                      | fernName == "sierpinskiGasket" = 
                                         sierpinskiGasket
+                                     | fernName == "sierpinskiCarpet" =
+                                        sierpinskiCarpet
                                      | fernName == "heighwayDragon" =
                                         heighwayDragon
                                      | fernName == "davidLDewey" =

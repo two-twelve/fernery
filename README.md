@@ -33,6 +33,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [Leptosporangiate Fern](#Leptosporangiate-Fern)
 - [Thelypteridaceae Fern](#Thelypteridaceae-Fern)
 - [The Sierpinski Gasket](#The-Sierpinski-Gasket)
+- [The Sierpinski Carpet](#The-Sierpinski-Carpet)
 - [The Heighway Dragon](#The-Heighway-Dragon)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)
 
@@ -86,6 +87,17 @@ stack exec -- fernery-exe -f sierpinskiGasket -o '(500,1000)' -s '(500,500)' -c 
 
 <p align="center">
   <img width="60%" src="./examples/sierpinskiGasket.png">
+</p>
+
+
+### The Sierpinski Carpet
+
+```bash
+stack exec -- fernery-exe -f sierpinskiCarpet -o '(50,50)' -s '(900,900)' -i 10000000 -c 'PixelRGB8 255 255 255' -b 'PixelRGB8 114 47 55' 
+```
+
+<p align="center">
+  <img width="60%" src="./examples/sierpinskiCarpet.png">
 </p>
 
 

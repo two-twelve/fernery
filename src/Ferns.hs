@@ -81,6 +81,14 @@ module Ferns where
       (1/6, affine (0.309, 0.255, -0.255, 0.309, 0.382, 0)),
       (1/6, affine (0.309, -0.255, 0.255, 0.309, 0.691, -0.255))
     ]
+  
+  kochCurve :: Fern
+  kochCurve = [
+      (0.25, affine (1/3, 0, 0, 1/3, 0, 0)),
+      (0.25, affine (1/6, - sqrt 3 / 6, sqrt 3 / 6, 1/6, 1/3, 0)),
+      (0.25, affine (1/6, sqrt 3 / 6, - sqrt 3 / 6, 1/6, 1/2, sqrt 3 / 6)),
+      (0.25, affine (1/3, 0, 0, 1/3, 2/3, 0))
+    ]
 
   -- Sourced from an old Fractal lab worksheet:
   -- https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm
@@ -119,6 +127,8 @@ module Ferns where
                                         heighwayDragon
                                      | fernName == "mcWortersPentigree" =
                                         mcWortersPentigree
+                                     | fernName == "kochCurve" =
+                                        kochCurve
                                      | fernName == "davidLDewey" =
                                         davidLDewey
                                      | otherwise = defaultFern

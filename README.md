@@ -38,6 +38,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [The Levy Dragon](#The-Levy-Dragon)
 - [The Heighway Dragon](#The-Heighway-Dragon)
 - [McWorter's Pentigree](#McWorter's-Pentigree)
+- [The Koch Curve](#The-Koch-Curve)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)
 
 
@@ -149,6 +150,18 @@ stack exec -- fernery-exe -f mcWortersPentigree -o '(130,330)' -s '(800,800)' -b
 <p align="center">
   <img width="60%" src="./examples/mcWortersPentigree.png">
 </p>
+
+
+### The Koch Curve
+
+```bash
+stack exec -- fernery-exe -f kochCurve -s '(900,-900)' -o '(50,450)' -d '(1000,600)' -b 'PixelRGBA8 120 81 169 255'
+```
+
+<p align="center">
+  <img width="80%" src="./examples/kochCurve.png">
+</p>
+
 
 
 

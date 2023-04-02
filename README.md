@@ -135,7 +135,7 @@ stack exec -- fernery-exe -f levyDragon -o '(275,250)' -s '(450,450)' -d '(1000,
 ### The Heighway Dragon
 
 ```bash
-stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '(500,500)' -c 'PixelRGBA8 0 0 0 255' -b 'PixelRGBA8 255 255 255 255' -i 10000000
+stack exec -- fernery-exe -f heighwayDragon -o '(250,500)' -d '(1000, 800)' -s '(600,600)' -c 'PixelRGBA8 0 0 0 255' -b 'PixelRGBA8 255 255 255 255' -i 2000000
 ```
 
 <p align="center">
@@ -202,8 +202,9 @@ stack exec -- fernery-exe -f treeFractal -o '(50,950)' -s '(900,-900)' -c 'Pixel
 ```
 
 <p align="center">
-  <img width="80%" src="./examples/treeFractal.png">
+  <img width="60%" src="./examples/treeFractal.png">
 </p>
+
 
 
 

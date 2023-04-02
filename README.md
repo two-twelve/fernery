@@ -37,7 +37,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [The Sierpinski Pentagon](#The-Sierpinski-Pentagon)
 - [The Levy Dragon](#The-Levy-Dragon)
 - [The Heighway Dragon](#The-Heighway-Dragon)
-- [McWorter's Pentigree](#McWorter's-Pentigree)
+- [McWorter's Pentigree](#McWorters-Pentigree)
 - [The Koch Curve](#The-Koch-Curve)
 - [The Koch Snowflake](#The-Koch-Snowflake)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)

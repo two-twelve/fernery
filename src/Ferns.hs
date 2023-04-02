@@ -32,6 +32,29 @@ module Ferns where
       (0.07, affine (-0.040, 0.2, 0.16, 0.04, 0.083, -0.7))
     ]
 
+  sierpinskiGasket :: Fern
+  sierpinskiGasket = [
+      (0.33, affine (0.5, 0, 0, 0.5, 0, -1)),
+      (0.33, affine (0.5, 0, 0, 0.5, 1, 1)),
+      (0.34, affine (0.5, 0, 0, 0.5, -1, 1))
+    ]
+
+  heighwayDragon :: Fern
+  heighwayDragon = [
+      (0.5, affine (0.5, 0.5, -0.5, 0.5, 0, 0)),
+      (0.5, affine (-0.5, -0.5, 0.5, -0.5, 1, 0))
+    ]
+
+  -- Sourced from an old Fractal lab worksheet:
+  -- https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm
+  davidLDewey :: Fern
+  davidLDewey = [
+      (0.25, affine (0.4, 0, 0, 0.4, -160, 0)),
+      (0.25, affine (0.4, 0.0, 0.0, 0.4, 160, 0)),
+      (0.25, affine (0.4, -0.5, 0.5, 0.4, 0, 0)),
+      (0.25, affine (0.4, 0.5, -0.5, 0.4, 0, 0))
+    ]
+
   -- Define a func that creates a list of transforms of size N for a fern where
   -- each transform occurs round(p(t) * N) times where p(t) is the probability
   -- of transform t
@@ -47,4 +70,10 @@ module Ferns where
                                         leptosporangiateFern
                                      | fernName == "thelypteridaceae" =
                                         thelypteridaceaeFern
+                                     | fernName == "sierpinskiGasket" = 
+                                        sierpinskiGasket
+                                     | fernName == "heighwayDragon" =
+                                        heighwayDragon
+                                     | fernName == "davidLDewey" =
+                                        davidLDewey
                                      | otherwise = defaultFern

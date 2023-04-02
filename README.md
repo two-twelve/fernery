@@ -70,3 +70,40 @@ stack exec -- fernery-exe -f thelypteridaceae -s '(-210, 125)'
 </p>
 
 
+
+### The Sierpinski Gasket
+
+```bash
+stack exec -- fernery-exe -f sierpinskiGasket -o '(500,1000)' -s '(500,500)' -c 'PixelRGB8 0 0 0' -b 'PixelRGB8 255 255 255'
+```
+
+<p align="center">
+  <img width="60%" src="./examples/sierpinskiGasket.png">
+</p>
+
+
+
+### The Heighway Dragon
+
+```bash
+stack exec -- fernery-exe -f heighwayDragon -o '(250,400)' -d '(1000, 800)' -s '(500,500)' -c 'PixelRGB8 0 0 0' -b 'PixelRGB8 255 255 255' -i 10000000
+```
+
+<p align="center">
+  <img width="80%" src="./examples/heighwayDragon.png">
+</p>
+
+
+
+
+### DavidLDewey Fractal
+
+The transforms used to generate this fractal are from an old worksheet authored by David L. Dewey which can be found [here](https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm).
+
+```bash
+stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,1000)' -b 'PixelRGB8 255 255 255' -c 'PixelRGB8 0 0 0'
+```
+
+<p align="center">
+  <img width="80%" src="./examples/davidLDewey.png">
+</p>

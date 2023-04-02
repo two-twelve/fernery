@@ -51,6 +51,15 @@ module Ferns where
       (0.125, affine(1/3, 0, 0, 1/3, 2/3, 2/3))
     ]
 
+  sierpinskiPentagon :: Fern
+  sierpinskiPentagon = [
+      (0.2, affine(0.382, 0, 0, 0.382, 0, 0)),
+      (0.2, affine(0.382, 0, 0, 0.382, 0.618, 0)),
+      (0.2, affine(0.382, 0, 0, 0.382, 0.809, -0.588)),
+      (0.2, affine(0.382, 0, 0, 0.382, 0.309, -0.951)),
+      (0.2, affine(0.382, 0, 0, 0.382, -0.191, -0.588))
+    ]
+  
   heighwayDragon :: Fern
   heighwayDragon = [
       (0.5, affine (0.5, 0.5, -0.5, 0.5, 0, 0)),
@@ -86,6 +95,8 @@ module Ferns where
                                         sierpinskiGasket
                                      | fernName == "sierpinskiCarpet" =
                                         sierpinskiCarpet
+                                     | fernName == "sierpinskiPentagon" =
+                                        sierpinskiPentagon
                                      | fernName == "heighwayDragon" =
                                         heighwayDragon
                                      | fernName == "davidLDewey" =

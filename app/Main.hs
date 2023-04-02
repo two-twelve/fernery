@@ -90,7 +90,8 @@ main = do
   let opts = info (options <**> helper)
              $ fullDesc
                <> header "Fernery 🌿"
-               <> progDesc "A CLI tool for generating images of ferns"
+               <> progDesc "A CLI tool for generating images of ferns and \
+                            \other Iterated Function Systems"
 
   (Options fernName iterations imageDimensions scale offset filePath
            backgroundColour fernColour seedOption) <- execParser opts

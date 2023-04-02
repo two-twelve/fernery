@@ -189,3 +189,11 @@ stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,100
 <p align="center">
   <img width="80%" src="./examples/davidLDewey.png">
 </p>
+
+
+## Acknowledgements
+
+The following have been useful sources of Iterative Function Systems to add to Fernery:
+
+- [Larry Riddle's Classic Iterated Function Systems](https://larryriddle.agnesscott.org/ifs/ifs.htm)
+- [David L. Dewey's Generating Fractals with Affine Transformations](https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm)

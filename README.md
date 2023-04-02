@@ -34,7 +34,7 @@ This list of examples is currently exhaustive, but I'd love to see more ferns ad
 ### Barnsley Fern
 
 ```bash
-stack exec -- fernery-exe -p 'examples/barnsley.png'
+stack exec -- fernery-exe -f barnsley
 ```
 
 <p align="center">
@@ -48,7 +48,7 @@ stack exec -- fernery-exe -p 'examples/barnsley.png'
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_mutated_-Leptosporangiate_fern.PNG).
 
 ```bash
-stack exec -- fernery-exe -p 'examples/leptosporangiate.png' -f leptosporangiate -s '(210, -160)'
+stack exec -- fernery-exe -f leptosporangiate -s '(210, -160)'
 ```
 
 <p align="center">
@@ -62,7 +62,7 @@ stack exec -- fernery-exe -p 'examples/leptosporangiate.png' -f leptosporangiate
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_with_different_coefficients_plotted_with_VisSim.PNG).
 
 ```bash
-stack exec -- fernery-exe -p 'examples/thelypteridaceae.png' -f thelypteridaceae -s '(-210, 125)'
+stack exec -- fernery-exe -f thelypteridaceae -s '(-210, 125)'
 ```
 
 <p align="center">

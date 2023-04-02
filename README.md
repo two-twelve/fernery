@@ -39,6 +39,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [The Heighway Dragon](#The-Heighway-Dragon)
 - [McWorter's Pentigree](#McWorter's-Pentigree)
 - [The Koch Curve](#The-Koch-Curve)
+- [The Koch Snowflake](#The-Koch-Snowflake)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)
 
 
@@ -160,6 +161,18 @@ stack exec -- fernery-exe -f kochCurve -s '(900,-900)' -o '(50,450)' -d '(1000,6
 
 <p align="center">
   <img width="80%" src="./examples/kochCurve.png">
+</p>
+
+
+
+### The Koch Snowflake
+
+```bash
+stack exec -- fernery-exe -f kochSnowflake -o '(500,500)' -s '(450,450)' -b 'PixelRGBA8 220 243 255 255' -c 'PixelRGBA8 57 109 124 255'
+```
+
+<p align="center">
+  <img width="60%" src="./examples/kochSnowflake.png">
 </p>
 
 

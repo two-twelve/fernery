@@ -89,6 +89,17 @@ module Ferns where
       (0.25, affine (1/6, sqrt 3 / 6, - sqrt 3 / 6, 1/6, 1/2, sqrt 3 / 6)),
       (0.25, affine (1/3, 0, 0, 1/3, 2/3, 0))
     ]
+  
+  kochSnowflake :: Fern
+  kochSnowflake = [
+      (1/7, affine (1/2, - sqrt 3 / 6, sqrt 3 / 6, 1/2, 0, 0)),
+      (1/7, affine (1/3, 0, 0, 1/3, 1 / sqrt 3, 1/3)),
+      (1/7, affine (1/3, 0, 0, 1/3, 0, 2/3)),
+      (1/7, affine (1/3, 0, 0, 1/3, - 1 / sqrt 3, 1/3)),
+      (1/7, affine (1/3, 0, 0, 1/3, - 1 / sqrt 3, -1/3)),
+      (1/7, affine (1/3, 0, 0, 1/3, 0, -2/3)),
+      (1/7, affine (1/3, 0, 0, 1/3, 1 / sqrt 3, -1/3))
+    ]
 
   -- Sourced from an old Fractal lab worksheet:
   -- https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm
@@ -129,6 +140,8 @@ module Ferns where
                                         mcWortersPentigree
                                      | fernName == "kochCurve" =
                                         kochCurve
+                                     | fernName == "kochSnowflake" =
+                                        kochSnowflake
                                      | fernName == "davidLDewey" =
                                         davidLDewey
                                      | otherwise = defaultFern

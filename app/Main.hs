@@ -15,6 +15,7 @@ data Options = Options {
     imageDimensions :: (Int, Int),
     scale :: (Double, Double),
     offset :: (Double, Double),
+    turtleRadius :: Int,
     filePath :: String,
     backgroundColour :: PixelRGBA8,
     foregroundColour :: PixelRGBA8,
@@ -62,6 +63,12 @@ options = Options
       help "The offset in pixels to apply in the (x, y) axes" <>
       showDefault <>
       value (475, 950))
+    <*> option auto (
+      short 'r' <>
+      long "turtleRadius" <>
+      help "The radius of the Von Neumann neighbourhood the turtle paints" <>
+      showDefault <>
+      value 0)
     <*> strOption (
       short 'p' <>
       long "filePath" <>
@@ -93,8 +100,8 @@ main = do
                <> progDesc "A CLI tool for generating images of ferns and \
                             \other Iterated Function Systems"
 
-  (Options fernName iterations imageDimensions scale offset filePath
-           backgroundColour fernColour seedOption) <- execParser opts
+  (Options fernName iterations imageDimensions scale offset turtleRadius 
+           filePath backgroundColour fernColour seedOption) <- execParser opts
 
   -- Find the matching fern to use
   let fern = getFernByName barnsleyFern fernName
@@ -105,7 +112,7 @@ main = do
 
   -- Create and write the image to a file
   writePng filePath $ fernImage ((0,0), mkStdGen seed)
-                                (TurtleConfig scale offset)
+                                (TurtleConfig scale offset turtleRadius)
                                 fern iterations imageDimensions
                                 (backgroundColour, fernColour)
   putStrLn $ "Your fern has been saved at ./" ++ filePath ++ " 🌿"

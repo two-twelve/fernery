@@ -1,7 +1,7 @@
 module Turtle where
   import System.Random (StdGen, randomR)
-  import Ferns (Point, Transform)
-
+  import Utils (Point, Transform, vonNeumannNeighborhood)
+  
   -- Define a TurtleState as a point and a random number generator
   type TurtleState = (Point, StdGen)
 
@@ -15,14 +15,14 @@ module Turtle where
   -- Define a TurtleConfig consisting of scales and offsets for the xy axes
   data TurtleConfig = TurtleConfig {
       scale :: (Double, Double),
-      offset :: (Double, Double)
+      offset :: (Double, Double),
+      penRadius :: Int
     }
 
   -- Define a function that takes a TurtleConfig and TurtleState and returns
   -- the TurtleState's position in pixel coordiantes
-  turtleToPixels :: TurtleConfig -> TurtleState -> (Int, Int)
-  turtleToPixels (TurtleConfig (scaleX, scaleY) (offsetX, offsetY)) 
-                 ((x, y), _) = (
-                    round $ x * scaleX + offsetX,
-                    round $ y * scaleY + offsetY
-                 )
+  turtleToPixels :: TurtleConfig -> TurtleState -> [(Int, Int)]
+  turtleToPixels (TurtleConfig (scaleX, scaleY) (offsetX, offsetY) penRadius)
+                 ((x, y), _) = vonNeumannNeighborhood penRadius (centerX, centerY)
+                    where centerX = round $ x * scaleX + offsetX
+                          centerY = round $ y * scaleY + offsetY

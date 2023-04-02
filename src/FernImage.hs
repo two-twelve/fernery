@@ -20,7 +20,7 @@ module FernImage where
         --- Create a set of pixels the turtle visited within our iterations
         visitedPixels = Set.fromList
                         $ take iterations 
-                        $ map (turtleToPixels turtleConfig) turtleStates
+                        $ concatMap (turtleToPixels turtleConfig) turtleStates
         -- Create a function that maps an xy pixel coord to a colour
         getColour x y = if Set.member (x, y) visitedPixels
                         then fernColour

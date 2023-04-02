@@ -1,12 +1,8 @@
 module Ferns where
-  -- Define a fern as a list of transforms with probabilities
-  type Point = (Double, Double)
-  type Transform = Point -> Point
-  type Fern = [(Double, Transform)]
+  import Utils (Point, Transform, affine)
 
-  -- Define a function for creating affine transformations
-  affine :: (Double, Double, Double, Double, Double, Double) -> Transform
-  affine (a, b, c, d, e, f) (x, y) = (a*x + b*y + e, c*x + d*y + f)
+  -- Define a fern as a list of transforms with probabilities
+  type Fern = [(Double, Transform)]
 
   barnsleyFern :: Fern
   barnsleyFern = [

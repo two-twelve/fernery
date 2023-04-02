@@ -29,6 +29,7 @@ library
       FernImage
       Ferns
       Turtle
+      Utils
   other-modules:
       Paths_fernery
   hs-source-dirs:

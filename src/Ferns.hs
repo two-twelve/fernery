@@ -69,7 +69,7 @@ module Ferns where
   heighwayDragon :: Fern
   heighwayDragon = [
       (0.5, affine (0.5, 0.5, -0.5, 0.5, 0, 0)),
-      (0.5, affine (-0.5, -0.5, 0.5, -0.5, 1, 0))
+      (0.5, affine (-0.5, 0.5, -0.5, -0.5, 1, 0))
     ]
   
   mcWortersPentigree :: Fern

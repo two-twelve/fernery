@@ -1,6 +1,6 @@
 # Fernery 🌿
 
-A CLI tool for generating images of ferns.
+A CLI tool for generating images of ferns and other [Iterated Function Systems](https://en.wikipedia.org/wiki/Iterated_function_system).
 
 
 

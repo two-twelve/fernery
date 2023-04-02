@@ -25,9 +25,16 @@ stack exec -- fernery-exe --help
 
 
 
-## Example Ferns
+## Example Images
 
-This list of examples is currently exhaustive, but I'd love to see more ferns added to this little CLI tool. 🧑‍🎨
+This list of examples is currently exhaustive of the IFSs provided in Fernery, but I'd love to see more added to this little CLI tool. PRs are welcome! 🧑‍🎨
+
+- [Barnsley Fern](#Barnsley-Fern)
+- [Leptosporangiate Fern](#Leptosporangiate-Fern)
+- [Thelypteridaceae Fern](#Thelypteridaceae-Fern)
+- [The Sierpinski Gasket](#The-Sierpinski-Gasket)
+- [The Heighway Dragon](#The-Heighway-Dragon)
+- [DavidLDewey Fractal](#DavidLDewey-Fractal)
 
 
 

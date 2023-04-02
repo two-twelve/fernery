@@ -41,6 +41,7 @@ This list of examples is currently exhaustive of the IFSs provided in Fernery, b
 - [The Koch Curve](#The-Koch-Curve)
 - [The Koch Snowflake](#The-Koch-Snowflake)
 - [DavidLDewey Fractal](#DavidLDewey-Fractal)
+- [Tree Fractal](#Tree-Fractal)
 
 
 
@@ -191,9 +192,25 @@ stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,100
 </p>
 
 
+
+### Tree Fractal
+
+This fractal can also be found on Peter E. Francis' [IFS Fractals](http://ifs-fractals.herokuapp.com/playground/tree).
+
+```bash
+stack exec -- fernery-exe -f treeFractal -o '(50,950)' -s '(900,-900)' -c 'PixelRGBA8 0 0 0 255' -b 'PixelRGBA8 255 255 255 255'
+```
+
+<p align="center">
+  <img width="80%" src="./examples/treeFractal.png">
+</p>
+
+
+
 ## Acknowledgements
 
 The following have been useful sources of Iterative Function Systems to add to Fernery:
 
 - [Larry Riddle's Classic Iterated Function Systems](https://larryriddle.agnesscott.org/ifs/ifs.htm)
 - [David L. Dewey's Generating Fractals with Affine Transformations](https://courses.cs.washington.edu/courses/cse142/01sp/misc/fractal_lab.htm)
+- [Peter E. Francis' IFS Fractals](http://ifs-fractals.herokuapp.com/)

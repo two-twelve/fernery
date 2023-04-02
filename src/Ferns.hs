@@ -111,6 +111,17 @@ module Ferns where
       (0.25, affine (0.4, 0.5, -0.5, 0.4, 0, 0))
     ]
 
+  -- Sourced from the IFS Fractals web app
+  -- http://ifs-fractals.herokuapp.com/playground/tree
+  treeFractal :: Fern
+  treeFractal = [
+      (0.2, affine (0.195, -0.488, 0.462, 0.414, 0.4431, 0.2452)),
+      (0.2, affine (0.462, 0.414, -0.252, 0.361, 0.2511, 0.5692)),
+      (0.2, affine (-0.058, -0.07, 0.453, -0.111, 0.5976, 0.0969)),
+      (0.2, affine (-0.035, 0.07, -0.469, -0.022, 0.4884, 0.5069)),
+      (0.2, affine (-0.637, 0, 0, 0.501, 0.8562, 0.2513))
+    ]
+
   -- Define a func that creates a list of transforms of size N for a fern where
   -- each transform occurs round(p(t) * N) times where p(t) is the probability
   -- of transform t
@@ -144,4 +155,6 @@ module Ferns where
                                         kochSnowflake
                                      | fernName == "davidLDewey" =
                                         davidLDewey
+                                     | fernName == "treeFractal" =
+                                        treeFractal
                                      | otherwise = defaultFern

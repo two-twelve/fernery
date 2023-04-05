@@ -25,6 +25,23 @@ stack exec -- fernery-exe --help
 
 
 
+## [FractalTees.Shop](https://fractaltees.shop/) 🛍
+
+A selection of images generated using Fernery are available printed on T-shirts and tote bags at [fractaltees.shop](https://fractaltees.shop/).
+
+<p align="center">
+  <a href="https://fractaltees.shop/product/barnsley-fern/">
+    <img width="30%" src="https://images.teemill.com/hthlgpp2ekwkdsanevfm7euvrohiiywzkwrblrcfabuqtw8h.png.webp?w=640&h=657&v=2">
+  </a>
+  <a href="https://fractaltees.shop/product/leptosporangiate/">
+    <img width="30%" src="https://images.teemill.com/uwck3iw0pruwtoahmyeowm40ujjuvwpd8c6mlohdcop70gyv.png.webp?w=640&h=657&v=2">
+  </a>
+  <a href="https://fractaltees.shop/product/thelypteridaceae-shirt/">
+    <img width="30%" src="https://images.teemill.com/i1rj0flwe6eq8crh5iqwgu75y0iyuzfo5sqcydmffmv5jb5v.png.webp?w=640&h=657&v=2">
+  </a>
+</p>
+
+
 ## Example Images
 
 This list of examples is currently exhaustive of the IFSs provided in Fernery, but I'd love to see more added to this little CLI tool. PRs are welcome! 🧑‍🎨
@@ -56,7 +73,6 @@ stack exec -- fernery-exe -f barnsley
 </p>
 
 
-
 ### Leptosporangiate Fern
 
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_mutated_-Leptosporangiate_fern.PNG).
@@ -70,7 +86,6 @@ stack exec -- fernery-exe -f leptosporangiate -s '(210, -160)'
 </p>
 
 
-
 ### Thelypteridaceae Fern
 
 The transforms used in this fern were found [here](https://en.wikipedia.org/wiki/File:Barnsley_fern_with_different_coefficients_plotted_with_VisSim.PNG).
@@ -82,7 +97,6 @@ stack exec -- fernery-exe -f thelypteridaceae -s '(-210, 125)'
 <p align="center">
   <img width="60%" src="./examples/thelypteridaceae.png">
 </p>
-
 
 
 ### The Sierpinski Gasket
@@ -107,7 +121,6 @@ stack exec -- fernery-exe -f sierpinskiCarpet -o '(50,50)' -s '(900,900)' -i 100
 </p>
 
 
-
 ### The Sierpinski Pentagon
 
 ```bash
@@ -119,7 +132,6 @@ stack exec -- fernery-exe -f sierpinskiPentagon -o '(250,875)' -s '(500,500)' -b
 </p>
 
 
-
 ### The Levy Dragon
 
 ```bash
@@ -129,7 +141,6 @@ stack exec -- fernery-exe -f levyDragon -o '(275,250)' -s '(450,450)' -d '(1000,
 <p align="center">
   <img width="80%" src="./examples/levyDragon.png">
 </p>
-
 
 
 ### The Heighway Dragon
@@ -165,7 +176,6 @@ stack exec -- fernery-exe -f kochCurve -s '(900,-900)' -o '(50,450)' -d '(1000,6
 </p>
 
 
-
 ### The Koch Snowflake
 
 ```bash
@@ -175,8 +185,6 @@ stack exec -- fernery-exe -f kochSnowflake -o '(500,500)' -s '(450,450)' -b 'Pix
 <p align="center">
   <img width="60%" src="./examples/kochSnowflake.png">
 </p>
-
-
 
 
 ### DavidLDewey Fractal
@@ -192,7 +200,6 @@ stack exec -- fernery-exe -f davidLDewey -s '(3,3)' -o '(850,500)' -d '(1700,100
 </p>
 
 
-
 ### Tree Fractal
 
 This fractal can also be found on Peter E. Francis' [IFS Fractals](http://ifs-fractals.herokuapp.com/playground/tree).
@@ -204,8 +211,6 @@ stack exec -- fernery-exe -f treeFractal -o '(50,950)' -s '(900,-900)' -c 'Pixel
 <p align="center">
   <img width="60%" src="./examples/treeFractal.png">
 </p>
-
-
 
 
 ## Acknowledgements

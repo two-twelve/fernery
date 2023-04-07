@@ -23,7 +23,15 @@ Various options are available to customise the appearance of the ferns. To see t
 stack exec -- fernery-exe --help
 ```
 
+### Installing with Homebrew (macOS)
 
+Fernery is also available to install from our Homebrew Tap.
+
+```bash
+brew tap two-twelve/tap
+brew install fernery
+fernery --help
+```
 
 ## [FractalTees.Shop](https://fractaltees.shop/) 🛍
 

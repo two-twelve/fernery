@@ -33,18 +33,18 @@ brew install fernery
 fernery --help
 ```
 
-## [FractalTees.Shop](https://fractaltees.shop/) 🛍
+## [FractalTees.Shop](https://fractal-tees.teemill.com/) 🛍
 
-A selection of images generated using Fernery are available printed on T-shirts and tote bags at [fractaltees.shop](https://fractaltees.shop/).
+A selection of images generated using Fernery are available printed on T-shirts and tote bags at [fractaltees.shop](https://fractal-tees.teemill.com/).
 
 <p align="center">
-  <a href="https://fractaltees.shop/product/barnsley-fern/">
+  <a href="https://fractal-tees.teemill.com/product/barnsley-fern/">
     <img width="30%" src="https://images.teemill.com/hthlgpp2ekwkdsanevfm7euvrohiiywzkwrblrcfabuqtw8h.png.webp?w=640&h=657&v=2">
   </a>
-  <a href="https://fractaltees.shop/product/leptosporangiate/">
+  <a href="https://fractal-tees.teemill.com/product/leptosporangiate/">
     <img width="30%" src="https://images.teemill.com/uwck3iw0pruwtoahmyeowm40ujjuvwpd8c6mlohdcop70gyv.png.webp?w=640&h=657&v=2">
   </a>
-  <a href="https://fractaltees.shop/product/thelypteridaceae-shirt/">
+  <a href="https://fractal-tees.teemill.com/product/thelypteridaceae-shirt/">
     <img width="30%" src="https://images.teemill.com/i1rj0flwe6eq8crh5iqwgu75y0iyuzfo5sqcydmffmv5jb5v.png.webp?w=640&h=657&v=2">
   </a>
 </p>
